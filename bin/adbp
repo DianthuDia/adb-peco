@@ -3,7 +3,7 @@
 SCRIPT="$0"
 
 if [ -n "`readlink "$SCRIPT"`" ] ; then
-    SCRIPT="`readlink "$SCRIPT"`"
+    SCRIPT="`dirname $0`/`readlink "$SCRIPT"`"
 fi
 
 SCRIPT="`dirname "$SCRIPT"`/adb_peco.sh"
